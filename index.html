@@ -12,6 +12,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: #333;
+            color: white;
         }
 
         header {
@@ -28,9 +30,21 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        .logo img {
+        max-width: 150px;
+        }
+
+        nav {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        }
+
 
         nav ul {
             list-style: none;
@@ -51,13 +65,13 @@
         }
 
         main {
-            margin-top: 60px;
+            margin-top: 100px;
             text-align: center;
         }
 
         .timer {
-            font-size: 48px;
-            margin: 20px 0;
+            font-size: 80px;
+            margin: 30px 0;
         }
 
         .drop-image img {
@@ -73,7 +87,9 @@
 </head>
 <body>
 <header>
-    <div class="logo">Brand Logo</div>
+    <div class="logo">
+        <img src="Asset%204.png" alt="umbsy logo">
+    </div>
     <nav>
         <ul>
             <li><a href="#contact">Contact</a></li>
@@ -89,11 +105,11 @@
     </div>
     <div id="contact" class="section">
         <h2>Contact Us</h2>
-        <p>Details about how to contact your brand.</p>
+        <p>Questions about your order? Contact us!</p>
     </div>
     <div id="support" class="section">
         <h2>Support</h2>
-        <p>Details about customer support.</p>
+        <p>Hi Joey</p>
     </div>
 </main>
 
@@ -123,7 +139,7 @@
         // If the count-down is over, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("timer").innerHTML = "EXPIRED";
+            document.getElementById("timer").innerHTML = "No drop right now. Check our Instagram for info on next drop";
         }
     }, 1000);
 </script>
